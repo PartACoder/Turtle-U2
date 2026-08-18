@@ -776,4 +776,51 @@ public class SimpleTurtle {
         this.yPos + " heading " + this.heading + ".";
   }
 
+  // Custom methods
+  public void polygon(int sides, int size) {
+    setHeading(0);
+    for (int i = 0; i < sides; i++) {
+      forward(size);
+      turn(360 / sides);
+    }
+  }
+
+  public void loop(int size)
+  {
+    setHeading(0);
+    for (int i = 0; i < 90; i++)
+    {
+      forward(size);
+      turn(4);
+    }
+  }
+
+  public void letterE(int size) {
+    setHeading(0);
+    int third = (int) (size / 3);
+    int currX;
+    int currY;
+    penDown();
+    for (int i = 0; i < 3; i++) {
+      setHeading(90);
+      currX = getXPos();
+      currY = getYPos();
+      forward(third);
+      moveTo(currX, currY);
+      if (i == 2) return;
+      setHeading(180);
+      forward(third);
+    }
+  }
+
+  public void star(int size)
+  {
+    setHeading(0);
+    for (int i = 0; i < 5; i++)
+    {
+      turn(144);
+      forward(size);
+    }
+  }
+
 } // end of class
