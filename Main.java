@@ -1,3 +1,5 @@
+import com.sun.tools.jconsole.JConsoleContext;
+
 import javax.swing.*;
 import java.awt.event.*;
 import java.util.*;
@@ -18,12 +20,19 @@ public class Main {
     // Turtle objects and setting attributes
     Turtle turtle1 = new Turtle(100, 100, world);
     turtle1.setShellColor(Color.red);
+    turtle1.setName("thor");
+
     Turtle turtle2 = new Turtle(500, 500, world);
     turtle2.setShellColor(Color.orange);
+    turtle2.setName("leo");
+
     Turtle turtle3 = new Turtle(100, 500, world);
     turtle3.setShellColor(Color.green);
+    turtle3.setName("michael");
+
     Turtle turtle4 = new Turtle(500, 100, world);
     turtle4.setShellColor(Color.blue);
+    turtle4.setName("luke");
 
     // Drawing
     turtle1.polygon(5, 50);
@@ -32,6 +41,10 @@ public class Main {
     turtle4.star(75);
 
     // Printing names
+    System.out.println("Turtle 1 | Name: " + turtle1.getName() + "\t Color: " + turtle1.getShellColor() + "\t Shape: " + "Hexagon " + " Distance from 0,0: " + turtle1.getDistance(0,0));
+    System.out.println("Turtle 2 | Name: " + turtle2.getName() + "\t Color: " + turtle2.getShellColor() + "\t Shape: " + "Circle  " + " Distance from 0,0: " + turtle2.getDistance(0,0));
+    System.out.println("Turtle 3 | Name: " + turtle3.getName() + " Color: " + turtle3.getShellColor() + "\t Shape: " + "Letter E" + " Distance from 0,0: " + turtle3.getDistance(0,0));
+    System.out.println("Turtle 4 | Name: " + turtle4.getName() + "\t Color: " + turtle4.getShellColor() + "\t Shape: " + "Star    " + " Distance from 0,0: " + turtle4.getDistance(0,0));
 
     // World world2 = new World(true);
 
